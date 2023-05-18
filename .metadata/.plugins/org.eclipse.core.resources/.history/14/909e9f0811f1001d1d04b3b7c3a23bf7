@@ -1,0 +1,44 @@
+
+public class JogoLabirinto {
+	private static final char PAREDE_VERTICAL = '|';
+	private static final char PAREDE_HORIZONTAL = '_';
+	private static final char VAZIO = ' ';
+	private static final char TAMANHO = 10;
+	private static char[][] tabuleiro;
+	
+	public static void inicializarMatriz() {
+		int i, j;
+		for(i = 0; i < TAMANHO; i++) {
+			tabuleiro[i][0] = PAREDE_VERTICAL;
+			tabuleiro[i][TAMANHO - 1] = PAREDE_HORIZONTAL;
+			tabuleiro[0][i] = PAREDE_HORIZONTAL;
+			tabuleiro[TAMANHO - 1][i] = PAREDE_HORIZONTAL;
+			
+		}
+		for(i = 1; i < (2); i++) {
+			System.out.println(i);
+			for(j = 1; i < (2); j++) {
+				
+				System.out.println(j);
+				tabuleiro[i][j] = VAZIO;
+			}	
+		}
+	}
+	public static void imprimir() {
+		int i, j;
+		for(i = 0; i < TAMANHO; i++) {
+			for(j = 0; i < TAMANHO; j++) {
+				System.out.print(tabuleiro[i][j]);
+			}
+			System.out.println();
+		}
+	}
+	public static void main(String[] args) {
+		tabuleiro = new char[TAMANHO][TAMANHO];
+		inicializarMatriz();
+//		imprimir();
+
+
+	}
+
+}
